@@ -21,12 +21,16 @@ public class PruebaSpringjpaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Persona persona1 = new Persona(null,"Paolo","Bianchi",23);
-		Persona persona2 = new Persona(null,"Mark", "Evans", 35);
+		Persona persona1 = new Persona(null,"Paolo","Bianchi",23,"Italia");
+		Persona persona2 = new Persona(null,"Mark", "Evans", 35,"USA");
+		Persona persona3 = new Persona(null,"Axel", "Boom", 25,"Colimbia");
 
+		//guardar personas en (INSERT INTO)
 		personaRepository.save(persona1);
 		personaRepository.save(persona2);
+		personaRepository.save(persona3);
 
+		//Recuperar personas
 		List<Persona>personas = personaRepository.findAll();
 		System.out.println(personas);
 
