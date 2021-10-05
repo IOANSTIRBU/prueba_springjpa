@@ -15,15 +15,17 @@ public class Persona {
     private String nombre;
     private String apellidos;
     private Integer anio;
+    private String pais;
 
     public Persona() {
     }
 
-    public Persona(Integer dni, String nombre, String apellidos, Integer anio) {
+    public Persona(Integer dni, String nombre, String apellidos, Integer anio,String pais) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.anio = anio;
+        this.pais = pais
     }
 
     public Integer getDni() {
